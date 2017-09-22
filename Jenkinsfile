@@ -1,9 +1,10 @@
 pipeline {
     agent { docker 'maven:3.3.3' }
+    def toolbelt = tool 'toolbelt'
     stages {
         stage('build') {
             steps {
-                bat 'sfdx force --help'
+                bat '${toolbelt} force --help'
                
             }
         }
