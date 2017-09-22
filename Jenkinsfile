@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'sfdx force --help'
-               
+                bat 'sfdx force:alias --help'
             }
         }
     }
