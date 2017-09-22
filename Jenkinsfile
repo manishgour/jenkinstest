@@ -1,11 +1,9 @@
 pipeline {
-    agent { docker 'maven:3.3.3' }
-    def toolbelt = tool 'toolbelt'
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                bat '${toolbelt} force --help'
-               
+                bat 'set'
             }
         }
     }
