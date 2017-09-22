@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'sfdx force --help'
+                rmsg = bat 'sfdx force --help'
+                println(rmsg)
             }
         }
     }
